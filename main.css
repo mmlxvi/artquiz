@@ -51,6 +51,10 @@ table {
 
 /* my work below */
 
+html {
+	height:100%;
+}
+
 .outer-div
 {
   padding: 30px;
@@ -59,7 +63,51 @@ table {
 .inner-div
 {
   margin: 0 auto;
-  max-width: 700px;
-  height: 100px;
+ 
+  width: 1000px;
+  height: 500px;
   background-color: #ccc;
 }
+
+.blocks {
+	
+	outline:1px black dashed;
+	 margin-left:auto;
+	 margin-right:auto;
+	 
+	 display:inline-block;
+	
+}
+
+#left {
+width:300px;
+	height:500px;
+}
+
+#middle {
+width:391px;
+	height:500px;
+}
+
+#right {
+	width:300px;
+	height:500px;
+}
+
+/* .testing {
+	height:100px;
+	width:250px;
+	outline:2px dotted bisque;
+	margin-left: auto;
+	margin-right:auto;
+	margin-bottom:30px;
+	position: relative;
+	top:15%;
+
+} */
+
+
+
+
+
+
