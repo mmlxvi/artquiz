@@ -59,6 +59,26 @@ body {
 	background-color:black;
 }
 
+#headHolder {
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#header {
+	color:white;
+	margin-top:100px;
+	position:absolute;
+	float:left;
+	width:360px;
+	font-family:Geneva;
+}
+
+#header img {
+	width:96%;
+	margin-left:7.2px
+
+}
+
 .outer-div
 {
 	margin-top:120px;
