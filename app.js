@@ -5,8 +5,16 @@ $(document).ready(function() {
 	var arrayNum = 0;
 
 
-	var qOne = ["paragraph about Rauschenberg", "Jim Dine", "Gerhard Richter",
-				"Jasper Johns", "Robert Rauschenberg", 4];
+	var qOne = ["paragraph about Rauschenberg", "Who painted this?", "", "Jim Dine", "Gerhard Richter",
+				"Jasper Johns", "Robert Rauschenberg", 5];
+
+	var qTwo = ["In what year was this painting completed?",
+				"paragraph about Willem de Kooning", "1915", "1945", "1975", "1995", 4];
+
+	var qThree = ["Who painted this?", "paragraph about Picasso", "George Braque", "Piet Mondrian", "Willem de Kooning",
+					"Pablo Picasso", 5];
+
+	var qFour = [""]
 
 	$("#qNumber").text(questionCounter);
 	$("#numberCorrect").text(correctNum);

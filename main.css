@@ -109,6 +109,7 @@ width:300px;
 
 }
 
+/*
 #theQuestion {
 	text-align:center;
 	border:1px solid black;
@@ -117,6 +118,7 @@ width:300px;
 	line-height:1.9em;
 	background-color:#f2f2f2;
 }
+*/
 
 #middle {
 	width:371px;
@@ -158,7 +160,8 @@ width:300px;
 	width:270px;
 	text-align:center;
 	line-height:2em;
-	
+	border: 1px black solid;
+	background:#f2f2f2;
 	
 	margin-left: auto;
 	margin-right:auto;
@@ -177,7 +180,7 @@ width:300px;
 	font-size:1.2em;
 	line-height:1.2em;
 	margin-bottom:20px;
-	margin-top:20px;
+	margin-top:0px;
 }
 
 #pictureFrame {
