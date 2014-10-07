@@ -1,5 +1,8 @@
 $(document).ready(function() {
-	alert('working');
+
+	questionCounter = 1;
+
+	$("#qNumber").text(questionCounter);
 
 
 
