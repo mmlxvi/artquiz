@@ -8,10 +8,10 @@ $(document).ready(function() {
 	var qOne = ["paragraph about Rauschenberg", "Who painted this?", "", "Jim Dine", "Gerhard Richter",
 				"Jasper Johns", "Robert Rauschenberg", 5];
 
-	var qTwo = ["In what year was this painting completed?",
-				"paragraph about Willem de Kooning", "1915", "1945", "1975", "1995", 4];
+	var qTwo = ["paragraph about Willem de Kooning", "In what year was this painting most likely completed?",
+				 "1915", "1945", "1975", "1995", 4];
 
-	var qThree = ["Who painted this?", "paragraph about Picasso", "George Braque", "Piet Mondrian", "Willem de Kooning",
+	var qThree = ["paragraph about Picasso", "Who painted this?", "George Braque", "Piet Mondrian", "Willem de Kooning",
 					"Pablo Picasso", 5];
 
 	var qFour = [""]
@@ -23,7 +23,7 @@ $(document).ready(function() {
 			
 	$("#nextQ").click(function() {
 
-	if (questionCounter < 10) {
+	if (questionCounter < 9) {
 
 		questionCounter = questionCounter + 1;
 		$("#qNumber").text(questionCounter);
@@ -31,9 +31,9 @@ $(document).ready(function() {
 		
 	}
 
-	else if (questionCounter = 11) {
+	else if (questionCounter = 10) {
 		$("#qNumber").text(questionCounter);
-		$("#nextQ").text("Play again?");
+		$("#nextQ").remove();
 	}
 
 	else {
