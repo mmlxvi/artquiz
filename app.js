@@ -5,7 +5,7 @@ $(document).ready(function() {
 	var arrayName = 0;
 
 
-	var qOne = ["paragraph about Rauschenberg", "Who painted this?", "Jim Dine", "Gerhard Richter",
+	var qOne = ["Sample question text begins here. It might be long, it might be short, we don't know yet. But it will be entertaining and informative, for sure. Adding some more text here to fill it out. Maybe a little longer. And a little more here. And here.", "Who painted this?", "Jim Dine", "Gerhard Richter",
 				"Jasper Johns", "Robert Rauschenberg", 5];
 
 	var qTwo = ["paragraph about Basquiat, Warhol, Clemente collaboration", "This painting was a collaboration between Basquiat, Warhol, and this painter.", 
