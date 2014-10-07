@@ -59,14 +59,10 @@ body {
 	background-color:black;
 }
 
-#headHolder {
-	margin-left:auto;
-	margin-right:auto;
-}
 
 #header {
 	color:white;
-	margin-top:100px;
+	margin-top:-70px;
 	position:absolute;
 	float:left;
 	width:360px;
@@ -75,7 +71,7 @@ body {
 
 #header img {
 	width:96%;
-	margin-left:7.2px
+	margin-left:30px
 
 }
 
@@ -118,7 +114,7 @@ width:300px;
 	border:1px solid black;
 	height:40px;
 	font-size:1.3em;
-	line-height:1.8em;
+	line-height:1.9em;
 	background-color:#f2f2f2;
 }
 
@@ -219,7 +215,7 @@ width:300px;
   -moz-border-radius: 0;
   border-radius: 0px;
   font-size:1.1em;
-  color: #ffffff;
+  color: #f2f2f2;
   
   background: #000000;
   
