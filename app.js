@@ -64,7 +64,14 @@ function loadNext(qArray){
 loadNext(metaArray[qCounter]);
 $('#qNumber').text(qCounter + 1);
 
+$('.btn').click(function(){
+	$("#response").fadeIn(500);
+})
 
+$('#nextQ').click(function() {
+	loadNext(metaArray[1]);
+	$('#response').fadeOut(500);
+})
 
 /*
 for (i=qCounter; i < 10; i++) {
