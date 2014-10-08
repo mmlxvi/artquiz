@@ -70,7 +70,7 @@ $('.btn').click(function(){
 
 $('#nextQ').click(function() {
 	loadNext(metaArray[1]);
-	$('#response').fadeOut(500);
+	$('#response').fadeOut(350);
 })
 
 /*
