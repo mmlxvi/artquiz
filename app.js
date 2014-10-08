@@ -6,7 +6,7 @@ $(document).ready(function() {
 
 
 
-function qArray(information, question, choice1, choice2, choice3, choice4, correctAns){
+function qArray(information, question, choice1, choice2, choice3, choice4, correctAns, txtForFdbck){
     this.information = information;
     this.question = question;
     this.choice1 = choice1;
@@ -14,11 +14,12 @@ function qArray(information, question, choice1, choice2, choice3, choice4, corre
     this.choice3 = choice3;
     this.choice4 = choice4;
     this.correctAns = correctAns;
+    this.txtForFdbck = txtForFdbck;
 }
 
 	var qOne = new qArray("This American artist was most famous for his work in the 1950s, during the period between Abstract Expressionism and Pop Art. In 1983, he won a Grammy Award for his album design of the Talking Heads album Speaking in Tongues.", 
 							"Who painted this?", "Jasper Johns", "Cy Twombly", "Gerhard Richter",
-							"Robert Rauschenberg", "Robert Rauschenberg");
+							"Robert Rauschenberg", "Robert Rauschenberg", "This silkscreen painting, Retroactive I, was created by Rauschenberg in the summer of 1963, a few months before Kennedy's assassination.");
 
 	var qTwo = new qArray("paragraph about Basquiat, Warhol, Clemente collaboration", "This painting was a collaboration between Basquiat, Warhol, and this painter.", 
 				"David Salle", "Yoko Ono", "Francesco Clemente", "Roy Lichtenstein", 4);
@@ -56,7 +57,8 @@ function loadNext(qArray){
     $('#button3').text(qArray.choice3);
     $('#button4').text(qArray.choice4);
     $('#qNumber').text(questionCounter);
-    $('#numberCorrect').text(score);
+    
+    $('#feedbackTxt').text(qArray.txtForFdbck);
 
     /* console.log(qArray.correctAns); */
 }
@@ -66,6 +68,7 @@ $('#qNumber').text(qCounter + 1);
 
 $('.btn').click(function(){
 	$("#response").fadeIn(400);
+
 })
 
 $('#nextQ').click(function() {
