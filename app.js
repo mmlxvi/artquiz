@@ -16,7 +16,7 @@ function qArray(information, question, choice1, choice2, choice3, choice4, corre
     this.correctAns = correctAns;
 }
 
-	var qOne = new qArray("This American artist was most famous for his work in the 1950s, during the period between Abstract Expressionism and Pop Art. In 1983, he won a Grammy Award for his album design of Talking Heads' album Speaking in Tongues.", 
+	var qOne = new qArray("This American artist was most famous for his work in the 1950s, during the period between Abstract Expressionism and Pop Art. In 1983, he won a Grammy Award for his album design of the Talking Heads album Speaking in Tongues.", 
 							"Who painted this?", "Jasper Johns", "Cy Twombly", "Gerhard Richter",
 							"Robert Rauschenberg", "Robert Rauschenberg");
 
