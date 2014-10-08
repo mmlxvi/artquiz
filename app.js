@@ -65,7 +65,6 @@ loadNext(metaArray[qCounter]);
 $('#qNumber').text(qCounter + 1);
 
 
-	
 
 /*
 for (i=qCounter; i < 10; i++) {
