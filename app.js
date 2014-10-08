@@ -65,7 +65,7 @@ loadNext(metaArray[qCounter]);
 $('#qNumber').text(qCounter + 1);
 
 $('.btn').click(function(){
-	$("#response").fadeIn(500);
+	$("#response").fadeIn(450);
 })
 
 $('#nextQ').click(function() {
