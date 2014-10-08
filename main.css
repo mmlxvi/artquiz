@@ -75,11 +75,22 @@ body {
 
 }
 
+#response {
+	background-color:#f3f3f3;
+	margin-top:120px;
+  height:500px;
+  padding: 30px;
+	display:none;
+	text-align: center;
+	
+}
+
 .outer-div
 {
 	margin-top:120px;
   height:500px;
   padding: 30px;
+	
   background-color: #f3f3f3;
 }
 .inner-div
@@ -203,8 +214,11 @@ width:300px;
 
 }
 
-#feedback1 {
-	display:none;
+#feedback {
+	text-align:center;
+	font-size:3em;
+	color:black;
+	top
 }
 
 
@@ -246,11 +260,7 @@ width:300px;
 
 }
 
-.specialBtn:hover {
-  background: #f2f2f2;
-  color:black;
-  text-decoration: none;
-}
+
 
 .specialBtn:focus {
 	outline:none;
