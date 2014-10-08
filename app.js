@@ -22,30 +22,30 @@ function qArray(information, question, choice1, choice2, choice3, choice4, corre
 							"Robert Rauschenberg", "Robert Rauschenberg", "This silkscreen painting, Retroactive I, was created by Rauschenberg in the summer of 1963, a few months before Kennedy's assassination.");
 
 	var qTwo = new qArray("paragraph about Basquiat, Warhol, Clemente collaboration", "This painting was a collaboration between Basquiat, Warhol, and this painter.", 
-				"David Salle", "Yoko Ono", "Francesco Clemente", "Roy Lichtenstein", 4);
+				"David Salle", "Yoko Ono", "Francesco Clemente", "Roy Lichtenstein", "Francesco Clemente", "This painting was made by the three artists in 1984 as part of a collaboration suggested by art dealer Bruno Bishofberger.");
 
 	var qThree = new qArray("paragraph about Krasner", "Who painted this?", "Helen Frankenthaler",
-				 "Lee Krasner", "Georgia O'Keeffe", "Frida Kahlo", 3);
+				 "Lee Krasner", "Georgia O'Keeffe", "Frida Kahlo", "Lee Krasner", "text about painting");
 
 	var qFour = new qArray("paragraph about Rivera", "Which actor played Diego Rivera in Julie Taymor's 2002 film Frida?",
-				"Javier Bardem", "Antonio Banderas", "Rubén Blades", "Alfred Molina", 5);
+				"Javier Bardem", "Antonio Banderas", "Rubén Blades", "Alfred Molina", "Alfred Molina", "text about Rivera");
 
 	var qFive = new qArray("paragraph about Rothko", "The Rothko Chapel is located in what American city?",
-				  "Houston", "San Francisco", "Baltimore", "New Haven", 2);
+				  "Houston", "San Francisco", "Baltimore", "New Haven", "Houston", "text about chapel");
 
 	var qSix = new qArray("paragraph about Salle", "Who painted this?", "Julian Schnabel", "Jeff Koons",
-				"Andy Warhol", "David Salle", 5);
+				"Andy Warhol", "David Salle", "David Salle", "text about Salle");
 
 	var qSeven = new qArray("Known primarily for his drip paintings like the one seen here, this earlier work something something something something something. It is interesting to note that something something and how that.", "How did Jackson Pollock die?", "in a car accident",
-				   "he drowned", "in a plane crash", "heart attack", 3);
+				   "he drowned", "in a plane crash", "heart attack", "in a car accident");
 
 	var	qEight = new qArray("paragraph about Picasso", "Who painted this?", "George Braque", "Piet Mondrian", "Willem de Kooning",
-					"Pablo Picasso", 5);
+					"Pablo Picasso", "Pablo Picasso", "text about painting");
 
 	var qNine = new qArray("paragraph about Willem de Kooning", "In what year was this painting most likely completed?",
-				 "1915", "1945", "1975", "1995", 4);
+				 "1915", "1945", "1975", "1995", "1945", "text about de Kooning");
 
-	var qTen = new qArray("paragraph about Morris Louis", "Who painted this?", "Morris Louis", "Jackson Pollock", "Mark Rothko", "Jim Dine", 3);
+	var qTen = new qArray("paragraph about Morris Louis", "Who painted this?", "Morris Louis", "Jackson Pollock", "Mark Rothko", "Jim Dine", "Morris Louis", "text about Louis");
 
 var metaArray = [qOne, qTwo, qThree, qFour, qFive, qSix, qSeven, qEight, qNine, qTen];
 
@@ -57,23 +57,43 @@ function loadNext(qArray){
     $('#button3').text(qArray.choice3);
     $('#button4').text(qArray.choice4);
     $('#qNumber').text(questionCounter);
-    
+    $('#numberCorrect').text(score);
     $('#feedbackTxt').text(qArray.txtForFdbck);
 
     /* console.log(qArray.correctAns); */
 }
 
 loadNext(metaArray[qCounter]);
-$('#qNumber').text(qCounter + 1);
+$('#qNumber').text(1);
 
 $('.btn').click(function(){
-	$("#response").fadeIn(400);
+	userChoice = $(this).text();
+		console.log(userChoice);
+
+		if (userChoice === metaArray[qCounter].correctAns) {
+			
+			score = score +1;
+			$('#numberCorrect').text(score);
+			$('#feedback').text("That's correct.")
+			$("#response").fadeIn(400);
+
+			}
+
+		else {
+			$('#feedback').text("That's incorrect.")
+			$("#response").fadeIn(400);
+		}
+	qCounter = qCounter+1;
 
 })
 
 $('#nextQ').click(function() {
-	loadNext(metaArray[1]);
+
+	
+	
+	loadNext(metaArray[qCounter]);
 	$('#response').fadeOut(350);
+	$('#qNumber').text(qCounter + 1);
 })
 
 /*
