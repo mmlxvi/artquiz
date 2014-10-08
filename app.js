@@ -17,18 +17,18 @@ function qArray(information, question, choice1, choice2, choice3, choice4, corre
     this.txtForFdbck = txtForFdbck;
 }
 
-	var qOne = new qArray("This American artist was most famous for his work in the 1950s, during the period between Abstract Expressionism and Pop Art. In 1983, he won a Grammy Award for his album design of the Talking Heads album Speaking in Tongues.", 
+	var qOne = new qArray("This American artist rose to fame in the 1950s, during the period between Abstract Expressionism and Pop Art. In 1983, he won a Grammy Award for his album design of the Talking Heads album Speaking in Tongues.", 
 							"Who painted this?", "Jasper Johns", "Cy Twombly", "Gerhard Richter",
 							"Robert Rauschenberg", "Robert Rauschenberg", "This silkscreen painting, Retroactive I, was created by Rauschenberg in the summer of 1963, a few months before Kennedy's assassination.");
 
-	var qTwo = new qArray("paragraph about Basquiat, Warhol, Clemente collaboration", "This painting was a collaboration between Basquiat, Warhol, and this painter.", 
-				"David Salle", "Yoko Ono", "Francesco Clemente", "Roy Lichtenstein", "Francesco Clemente", "This painting was made by the three artists in 1984 as part of a collaboration suggested by art dealer Bruno Bishofberger.");
+	var qTwo = new qArray("This painting was created as part of a collaborative series by three well-known artists in 1984. The artists were Jean Michel Basquiat, Andy Warhol, and an Italian painter whose work is prominently featured in the 1998 film adaptation of Charles Dickens' Great Expectations.", "Who is the third artist?", 
+				"David Salle", "Yoko Ono", "Francesco Clemente", "Roy Lichtenstein", "Francesco Clemente", "This painting, titled Alba's Breakfast,");
 
 	var qThree = new qArray("paragraph about Krasner", "Who painted this?", "Helen Frankenthaler",
-				 "Lee Krasner", "Georgia O'Keeffe", "Frida Kahlo", "Lee Krasner", "text about painting");
+				 "Lee Krasner", "Georgia O'Keeffe", "Frida Kahlo", "Lee Krasner", "Hans Hoffman, one of Krasner's teachers once remarked that her work was 'so good you would not know it was painted by a woman.'");
 
-	var qFour = new qArray("paragraph about Rivera", "Which actor played Diego Rivera in Julie Taymor's 2002 film Frida?",
-				"Javier Bardem", "Antonio Banderas", "Rubén Blades", "Alfred Molina", "Alfred Molina", "text about Rivera");
+	var qFour = new qArray("This Mexican painter was portrayed by Rubén Blades in the 1999 film Cradle Will Rock, and by Alfred Molina in Julie Taymor's Frida Kahlo biopic in 2002.", "Who is the painter?",
+				"José Chávez Morado", "Salvador Corona", "Fernando Leal", "Diego Rivera", "Diego Rivera", "text about Rivera");
 
 	var qFive = new qArray("paragraph about Rothko", "The Rothko Chapel is located in what American city?",
 				  "Houston", "San Francisco", "Baltimore", "New Haven", "Houston", "text about chapel");
