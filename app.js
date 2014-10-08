@@ -16,7 +16,7 @@ function qArray(information, question, choice1, choice2, choice3, choice4, corre
     this.correctAns = correctAns;
 }
 
-	var qOne = new qArray("This American artist was famous for his work in the 1950s, in the period between Abstract Expressionism and Pop Art. In 1983, he won a Grammy Award for his album design of Talking Heads' album Speaking in Tongues.", 
+	var qOne = new qArray("This American artist was most famous for his work in the 1950s, during the period between Abstract Expressionism and Pop Art. In 1983, he won a Grammy Award for his album design of Talking Heads' album Speaking in Tongues.", 
 							"Who painted this?", "Jasper Johns", "Cy Twombly", "Gerhard Richter",
 							"Robert Rauschenberg", "Robert Rauschenberg");
 
@@ -65,6 +65,22 @@ loadNext(metaArray[qCounter]);
 $('#qNumber').text(qCounter + 1);
 
 
+	
+
+/*
+for (i=qCounter; i < 10; i++) {
+	$('.btn').click(function() {
+		loadNext(metaArray[i]);
+		qCounter = qCounter +1;
+    	$('#qNumber').text(qCounter + 1);
+  
+	});
+    }	
+
+
+*/
+
+/*
 			
 	$('.btn').click(function() {
 
@@ -75,10 +91,14 @@ $('#qNumber').text(qCounter + 1);
 			
 			score = score +1;
 			$('#numberCorrect').text(score);
-			$('#mainBox').hide();
+			$('.inner-div').hide();
 			$('#response').show();
 			$('#feedback').text('that is correct.')
-			
+			$('#nextQ').click(function() {
+				$('#response').hide();
+				$('.inner-div').show();
+
+			});
 
 		}
 
@@ -88,15 +108,13 @@ $('#qNumber').text(qCounter + 1);
 			$('#feedback').text('that is incorrect.')
 		}
 
-	$('#nextQ').click(function() {
-				$('#response').hide();
-				$('#mainBox').show();
-
-			});
+	
 
 });
+	
 
 
+*/
 
 
 });
