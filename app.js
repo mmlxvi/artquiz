@@ -75,7 +75,7 @@ $('#qNumber').text(qCounter + 1);
 			
 			score = score +1;
 			$('#numberCorrect').text(score);
-			$('.inner-div').hide();
+			$('#mainBox').hide();
 			$('#response').show();
 			$('#feedback').text('that is correct.')
 			
@@ -83,20 +83,20 @@ $('#qNumber').text(qCounter + 1);
 		}
 
 		else {
-			$('.inner-div').hide();
+			$('#mainBox').hide();
 			$('#response').show();
 			$('#feedback').text('that is incorrect.')
 		}
 
 	$('#nextQ').click(function() {
 				$('#response').hide();
-				$('.inner-div').show();
+				$('#mainBox').show();
 
 			});
 
 });
 
-	
+
 
 
 });
