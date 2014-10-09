@@ -18,42 +18,44 @@ function qArray(information, question, choice1, choice2, choice3, choice4, corre
     this.painting = painting;
 }
 
-	var imageLibrary = ['08132012_EDU_app_raushenberg_main.jpg', 'images/albasbreakfast.jpg', 'nightcreatures.jpg',
-						 'Rivera-the-arsenal.jpg', 'white-center.jpg', '124Good-byeA2008.jpg', 'CRI_298734.jpg',
-						 'Reading_The_Letter_Picasso_1921_small.jpg', 'dekooningpinkangels.jpg', 'morrislouissquare.jpg']
+	var imageLibrary = ['images/08132012_EDU_app_raushenberg_main.jpg', 'images/albasbreakfast.jpg', 'images/nightcreatures.jpg',
+						 'images/Rivera-the-arsenal.jpg', 'images/white-center.jpg', 'images/124Good-byeA2008.jpg', 'images/CRI_298734.jpg',
+						 'images/Reading_The_Letter_Picasso_1921_small.jpg', 'images/dekooningpinkangels.jpg', 'images/morrislouissquare.jpg']
 
 
 	var qOne = new qArray("This American artist rose to fame in the 1950s, during the period between Abstract Expressionism and Pop Art. In 1983, he won a Grammy Award for his album design of the Talking Heads album Speaking in Tongues.", 
 							"Who painted this?", "Jasper Johns", "Cy Twombly", "Gerhard Richter",
-							"Robert Rauschenberg", "Robert Rauschenberg", "This silkscreen painting, Retroactive I, was created by Rauschenberg in the summer of 1963, a few months before Kennedy's assassination.");
+							"Robert Rauschenberg", "Robert Rauschenberg", "This silkscreen painting, Retroactive I, was created by Rauschenberg in the summer of 1963, a few months before Kennedy's assassination.", "08132012_EDU_app_raushenberg_main.jpg");
 
 	var qTwo = new qArray("This painting was created as part of a collaborative series by three well-known artists in 1984: Jean Michel Basquiat, Andy Warhol, and an Italian painter whose work is prominently featured in the 1998 film adaptation of Charles Dickens' Great Expectations starring Robert DeNiro and Gwyneth Paltrow.", "Who is the third artist?", 
-				"David Salle", "Fabrizio Plessi", "Francesco Clemente", "Roy Lichtenstein", "Francesco Clemente", "The third artist was Clemente.");
+				"David Salle", "Fabrizio Plessi", "Francesco Clemente", "Roy Lichtenstein", "Francesco Clemente", "The third artist was Clemente.", "albasbreakfast.jpg");
 
 	var qThree = new qArray("She was an influential American abstract expressionist painter in the second half of the 20th century, as was her husband, who was the more famous of the two. The work seen here, Night Creatures, was completed in 1965.", "Who painted this?", "Helen Frankenthaler",
-				 "Lee Krasner", "Georgia O'Keeffe", "Frida Kahlo", "Lee Krasner", "Hans Hoffman, one of Krasner's teachers, once remarked that her work was 'so good you would not know it was painted by a woman.'");
+				 "Lee Krasner", "Georgia O'Keeffe", "Frida Kahlo", "Lee Krasner", "Hans Hoffman, one of Krasner's teachers, once remarked that her work was 'so good you would not know it was painted by a woman.'", 'nightcreatures.jpg');
 
 	var qFour = new qArray("This Mexican painter was portrayed by Rubén Blades in the 1999 film Cradle Will Rock, and by Alfred Molina in Julie Taymor's Frida Kahlo biopic in 2002.", "Who is the painter?",
-				"José Chávez Morado", "Salvador Corona", "Fernando Leal", "Diego Rivera", "Diego Rivera", "text about Rivera");
+				"José Chávez Morado", "Salvador Corona", "Fernando Leal", "Diego Rivera", "Diego Rivera", "text about Rivera", 'Rivera-the-arsenal.jpg');
 
 	var qFive = new qArray("paragraph about Rothko", "The Rothko Chapel is located in what American city?",
-				  "Houston", "San Francisco", "Baltimore", "New Haven", "Houston", "text about chapel");
+				  "Houston", "San Francisco", "Baltimore", "New Haven", "Houston", "text about chapel", 'white-center.jpg');
 
 	var qSix = new qArray("paragraph about Salle", "Who painted this?", "Julian Schnabel", "Jeff Koons",
-				"Andy Warhol", "David Salle", "David Salle", "text about Salle");
+				"Andy Warhol", "David Salle", "David Salle", "text about Salle", '124Good-byeA2008.jpg');
 
 	var qSeven = new qArray("Known primarily for his drip paintings like the one seen here, this earlier work something something something something something. It is interesting to note that something something and how that.", "How did Jackson Pollock die?", "in a car accident",
-				   "he drowned", "in a plane crash", "heart attack", "in a car accident");
+				   "he drowned", "in a plane crash", "heart attack", "in a car accident", "text about him", "CRI_298734.jpg");
 
 	var	qEight = new qArray("paragraph about Picasso", "Who painted this?", "George Braque", "Piet Mondrian", "Willem de Kooning",
-					"Pablo Picasso", "Pablo Picasso", "text about painting");
+					"Pablo Picasso", "Pablo Picasso", "text about painting", 'Reading_The_Letter_Picasso_1921_small.jpg');
 
 	var qNine = new qArray("paragraph about Willem de Kooning", "In what year was this painting most likely completed?",
-				 "1915", "1945", "1975", "1995", "1945", "text about de Kooning");
+				 "1915", "1945", "1975", "1995", "1945", "text about de Kooning", 'dekooningpinkangels.jpg');
 
-	var qTen = new qArray("paragraph about Morris Louis", "Who painted this?", "Morris Louis", "Jackson Pollock", "Mark Rothko", "Jim Dine", "Morris Louis", "text about Louis");
+	var qTen = new qArray("paragraph about Morris Louis", "Who painted this?", "Morris Louis", "Jackson Pollock", "Mark Rothko", "Jim Dine", "Morris Louis", "text about Louis", 'morrislouissquare.jpg');
 
 var metaArray = [qOne, qTwo, qThree, qFour, qFive, qSix, qSeven, qEight, qNine, qTen];
+
+
 
 function loadNext(qArray){
     $('#info').text(qArray.information);
@@ -65,8 +67,12 @@ function loadNext(qArray){
     $('#qNumber').text(questionCounter);
     $('#numberCorrect').text(score);
     $('#feedbackTxt').text(qArray.txtForFdbck);
-}
+    $("#pictureFrame").append('<img src="images/' + metaArray[qCounter].painting +'">');
+    //$('#picture').show("fast", function () {
+    //	$(this).attr('src', qArray.painting);
+	//};
 
+}
 
 
 loadNext(metaArray[qCounter]);
@@ -93,6 +99,7 @@ $('.btn').click(function(){
 		}
 
 		qCounter = qCounter+1;
+		
 	}
 
 	else {
@@ -132,6 +139,8 @@ $('#nextQ').click(function() {
 	loadNext(metaArray[qCounter]);
 	$('#response').fadeOut(350);
 	$('#qNumber').text(qCounter + 1);
+	
+
 
 })
 

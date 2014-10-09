@@ -288,6 +288,9 @@ width:300px;
 
 }
 
+#picture2 {
+	display:none;
+}
 
 
 .specialBtn:focus {
