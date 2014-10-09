@@ -6,7 +6,7 @@ $(document).ready(function() {
 
 
 
-function qArray(information, question, choice1, choice2, choice3, choice4, correctAns, txtForFdbck){
+function qArray(information, question, choice1, choice2, choice3, choice4, correctAns, txtForFdbck, painting){
     this.information = information;
     this.question = question;
     this.choice1 = choice1;
@@ -15,17 +15,23 @@ function qArray(information, question, choice1, choice2, choice3, choice4, corre
     this.choice4 = choice4;
     this.correctAns = correctAns;
     this.txtForFdbck = txtForFdbck;
+    this.painting = painting;
 }
+
+	var imageLibrary = ['08132012_EDU_app_raushenberg_main.jpg', 'images/albas breakfast.jpg', 'nightcreatures.jpg',
+						 'Rivera-the-arsenal.jpg', 'white-center.jpg', '124 Good-bye A. 2008.jpg', 'CRI_298734.jpg',
+						 'Reading_The_Letter_Picasso_1921_small.jpg', 'dekooningpinkangels.jpg', 'morris louis square.jpg']
+
 
 	var qOne = new qArray("This American artist rose to fame in the 1950s, during the period between Abstract Expressionism and Pop Art. In 1983, he won a Grammy Award for his album design of the Talking Heads album Speaking in Tongues.", 
 							"Who painted this?", "Jasper Johns", "Cy Twombly", "Gerhard Richter",
 							"Robert Rauschenberg", "Robert Rauschenberg", "This silkscreen painting, Retroactive I, was created by Rauschenberg in the summer of 1963, a few months before Kennedy's assassination.");
 
-	var qTwo = new qArray("This painting was created as part of a collaborative series by three well-known artists in 1984. The artists were Jean Michel Basquiat, Andy Warhol, and an Italian painter whose work is prominently featured in the 1998 film adaptation of Charles Dickens' Great Expectations.", "Who is the third artist?", 
-				"David Salle", "Yoko Ono", "Francesco Clemente", "Roy Lichtenstein", "Francesco Clemente", "This painting, titled Alba's Breakfast,");
+	var qTwo = new qArray("This painting was created as part of a collaborative series by three well-known artists in 1984: Jean Michel Basquiat, Andy Warhol, and an Italian painter whose work is prominently featured in the 1998 film adaptation of Charles Dickens' Great Expectations starring Robert DeNiro and Gwyneth Paltrow.", "Who is the third artist?", 
+				"David Salle", "Fabrizio Plessi", "Francesco Clemente", "Roy Lichtenstein", "Francesco Clemente", "The third artist was Clemente.");
 
-	var qThree = new qArray("paragraph about Krasner", "Who painted this?", "Helen Frankenthaler",
-				 "Lee Krasner", "Georgia O'Keeffe", "Frida Kahlo", "Lee Krasner", "Hans Hoffman, one of Krasner's teachers once remarked that her work was 'so good you would not know it was painted by a woman.'");
+	var qThree = new qArray("She was an influential American abstract expressionist painter in the second half of the 20th century, as was her husband, who was the more famous of the two. The work seen here, Night Creatures, was completed in 1965.", "Who painted this?", "Helen Frankenthaler",
+				 "Lee Krasner", "Georgia O'Keeffe", "Frida Kahlo", "Lee Krasner", "Hans Hoffman, one of Krasner's teachers, once remarked that her work was 'so good you would not know it was painted by a woman.'");
 
 	var qFour = new qArray("This Mexican painter was portrayed by Rubén Blades in the 1999 film Cradle Will Rock, and by Alfred Molina in Julie Taymor's Frida Kahlo biopic in 2002.", "Who is the painter?",
 				"José Chávez Morado", "Salvador Corona", "Fernando Leal", "Diego Rivera", "Diego Rivera", "text about Rivera");
@@ -59,9 +65,9 @@ function loadNext(qArray){
     $('#qNumber').text(questionCounter);
     $('#numberCorrect').text(score);
     $('#feedbackTxt').text(qArray.txtForFdbck);
-
-    /* console.log(qArray.correctAns); */
 }
+
+
 
 loadNext(metaArray[qCounter]);
 $('#qNumber').text(1);
@@ -70,11 +76,13 @@ $('.btn').click(function(){
 	userChoice = $(this).text();
 		console.log(userChoice);
 
+	if (qCounter < 9) {
+
 		if (userChoice === metaArray[qCounter].correctAns) {
 			
 			score = score +1;
 			$('#numberCorrect').text(score);
-			$('#feedback').text("That's correct.")
+			$('#feedback').text("That's correct.");
 			$("#response").fadeIn(400);
 
 			}
@@ -83,7 +91,37 @@ $('.btn').click(function(){
 			$('#feedback').text("That's incorrect.")
 			$("#response").fadeIn(400);
 		}
-	qCounter = qCounter+1;
+
+		qCounter = qCounter+1;
+	}
+
+	else {
+
+		if (userChoice === metaArray[qCounter].correctAns) {
+			
+			score = score +1;
+			$('#numberCorrect').text(score);
+			$('#feedback').text("Your score: " + score * 10 + "%");
+			$('#finalScore').text(score);
+			$('#finalScore').show();
+			$("#response").fadeIn(400);
+			$('#nextQ').remove();
+
+			}
+
+		else {
+			$('#feedback').text("Your score: " + score * 10 + "%");
+			$('#finalScore').text(score);
+			$('#finalScore').show();
+			$('#nextQ').remove();
+			$("#response").fadeIn(400);
+		}
+		$('#feedbackTxt').remove();
+		
+		$('#playAgain').show();
+	}
+
+	
 
 })
 
@@ -94,56 +132,16 @@ $('#nextQ').click(function() {
 	loadNext(metaArray[qCounter]);
 	$('#response').fadeOut(350);
 	$('#qNumber').text(qCounter + 1);
+
 })
 
-/*
-for (i=qCounter; i < 10; i++) {
-	$('.btn').click(function() {
-		loadNext(metaArray[i]);
-		qCounter = qCounter +1;
-    	$('#qNumber').text(qCounter + 1);
-  
-	});
-    }	
+$('#playAgain').click(function() {
 
-
-*/
-
-/*
-			
-	$('.btn').click(function() {
-
-		userChoice = $(this).text();
-		console.log(userChoice);
-
-		if (userChoice === qOne.correctAns) {
-			
-			score = score +1;
-			$('#numberCorrect').text(score);
-			$('.inner-div').hide();
-			$('#response').show();
-			$('#feedback').text('that is correct.')
-			$('#nextQ').click(function() {
-				$('#response').hide();
-				$('.inner-div').show();
-
-			});
-
-		}
-
-		else {
-			$('#mainBox').hide();
-			$('#response').show();
-			$('#feedback').text('that is incorrect.')
-		}
-
-	
-
-});
-	
-
-
-*/
-
+	score=0;
+	qCounter=0;
+	loadNext(metaArray[0]);
+	$('#response').fadeOut(350);
+	$('#qNumber').text(1);
+})
 
 });

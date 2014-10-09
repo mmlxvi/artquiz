@@ -311,6 +311,16 @@ width:300px;
 	font-size:1em;
 }
 
+#finalScore {
+	display:none;
+	color:white:;
+}
+
+#playAgain {
+	display:none;
+}
+
+
 #foot {
 	
 	margin-top:5px;
