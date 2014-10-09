@@ -20,7 +20,7 @@ function qArray(information, question, choice1, choice2, choice3, choice4, corre
 
 	var imageLibrary = ['images/08132012_EDU_app_raushenberg_main.jpg', 'images/albasbreakfast.jpg', 'images/nightcreatures.jpg',
 						 'images/Rivera-the-arsenal.jpg', 'images/white-center.jpg', 'images/124Good-byeA2008.jpg', 'images/number-1-lavender-mist.jpg',
-						 'images/Reading_The_Letter_Picasso_1921_small.jpg', 'images/dekooningpinkangels.jpg', 'images/morrislouissquare.jpg']
+						 'images/Reading_The_Letter_Picasso_1921_small.jpg', 'images/dekooningpinkangels.jpg', 'images/point-of-tranquility-1960.jpg']
 
 
 	var qOne = new qArray("This American artist rose to fame in the 1950s, during the period between Abstract Expressionism and Pop Art. In 1983, he won a Grammy Award for his album design of the Talking Heads album Speaking in Tongues.", 
@@ -51,7 +51,7 @@ function qArray(information, question, choice1, choice2, choice3, choice4, corre
 	var qNine = new qArray("Willem de Kooning (1904 – 1997) was a Dutch American abstract expressionist. The work shown here, 'Pink Angels', is the final painting in his first series devoted to images of women.", "In what year was this painting most likely completed?",
 				 "1935", "1945", "1955", "1965", "1945", "'Pink Angels' was completed circa 1945.", 'dekooningpinkangels.jpg');
 
-	var qTen = new qArray("This painter's work, which provides a link between Abstract Expressionism and Color Field painting, is characterized by layered rainbows of acrylic paint poured down huge blank canvases.", "Who painted this?", "Morris Louis", "Jackson Pollock", "Mark Rothko", "Jim Dine", "Morris Louis", "Morris Louis (born Morris Louis Bernstein) created this painting circa 1959.", 'floralMorrisLouis.jpg');
+	var qTen = new qArray("This painter's work, which provides a link between Abstract Expressionism and Color Field painting, is characterized by layered rainbows of acrylic paint poured down huge blank canvases.", "Who painted this?", "Morris Louis", "Jackson Pollock", "Mark Rothko", "Jim Dine", "Morris Louis", "Morris Louis (born Morris Louis Bernstein) created this painting circa 1959.", 'point-of-tranquility-1960.jpg');
 
 var metaArray = [qOne, qTwo, qThree, qFour, qFive, qSix, qSeven, qEight, qNine, qTen];
 
