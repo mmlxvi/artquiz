@@ -392,7 +392,8 @@ margin-top:25px;
 
 #finalScore {
 	display:none;
-	color:white:;
+	color:white;
+	font-size:2em;
 }
 
 #playAgain {

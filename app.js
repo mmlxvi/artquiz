@@ -37,7 +37,7 @@ function qArray(information, question, choice1, choice2, choice3, choice4, corre
 				"José Chávez Morado", "Salvador Corona", "Fernando Leal", "Diego Rivera", "Diego Rivera", "This image is a detail from Diego Rivera's 1928 mural, The Arsenal. The central figure of the painting is Frida Kahlo, Rivera's wife.", 'Rivera-the-arsenal.jpg');
 
 	var qFive = new qArray("Mark Rothko was an Abstract Expressionist painter whose signature works are large-scale paintings of  emotionally evocative colored rectangles. In 1964, he was commissioned to create a meditative space filled with his paintings. Rothko committed suicide in 1970 and did not live to see the chapel completed.", "The Rothko Chapel is located in what American city?",
-				  "Houston", "San Francisco", "Baltimore", "New Haven", "Houston", "Composer Morton Feldman wrote a piece inspired by his visit to the chapel in Houston in 1971.", 'white-center.jpg');
+				  "Houston", "San Francisco", "Baltimore", "New Haven", "Houston", "Composer Morton Feldman wrote a piece inspired by his visit to the chapel in Houston.", 'white-center.jpg');
 
 	var qSix = new qArray("This American painter was born in 1952. He studied at CalArts and rose to fame in New York in the 1980s. His paintings often juxtapose seemingly unrelated images appropriated from popular culture and art history. In 1995 he directed the feature film Search and Destory, which starred Christopher Walken and Dennis Hopper.", "Who painted this?", "Julian Schnabel", "Jeff Koons",
 				"Andy Warhol", "David Salle", "David Salle", "This painting, 'Goodbye A.', was completed by David Salle in 2008.", '124Good-byeA2008.jpg');
@@ -51,7 +51,7 @@ function qArray(information, question, choice1, choice2, choice3, choice4, corre
 	var qNine = new qArray("Willem de Kooning (1904 – 1997) was a Dutch American abstract expressionist. The work shown here, 'Pink Angels', is the final painting in his first series devoted to images of women.", "In what year was this painting most likely completed?",
 				 "1935", "1945", "1955", "1965", "1945", "'Pink Angels' was completed circa 1945.", 'dekooningpinkangels.jpg');
 
-	var qTen = new qArray("This painter's work, which provides a link between Abstract Expressionism and Color Field painting, is characterized by layered rainbows of acrylic paint poured down huge blank canvases.", "Who painted this?", "Morris Louis", "Jackson Pollock", "Mark Rothko", "Jim Dine", "Morris Louis", "Morris Louis (born Morris Louis Bernstein) created this painting circa 1959.", 'point-of-tranquility-1960.jpg');
+	var qTen = new qArray("This painter's work, which provides a link between Abstract Expressionism and Color Field painting, is characterized by layered rainbows of acrylic paint poured down huge blank canvases.", "Who painted this?", "Morris Louis", "Jackson Pollock", "Mark Rothko", "Jim Dine", "Morris Louis", "Morris Louis created this painting circa 1959.", 'point-of-tranquility-1960.jpg');
 
 var metaArray = [qOne, qTwo, qThree, qFour, qFive, qSix, qSeven, qEight, qNine, qTen];
 
@@ -68,7 +68,7 @@ function loadNext(qArray){
     $('#button4').text(qArray.choice4);
     $('#qNumber').text(questionCounter);
     $('#numberCorrect').text(score);
-    $('#feedbackTxt').text(qArray.txtForFdbck);
+    
     $(paintingArray[qCounter]).show();
     
 
@@ -84,6 +84,7 @@ loadNext(metaArray[qCounter]);
 $('#qNumber').text(1);
 
 $('.btn').click(function(){
+	$('#feedbackTxt').text(metaArray[qCounter].txtForFdbck);
 	userChoice = $(this).text();
 		console.log(userChoice);
 
@@ -113,24 +114,27 @@ $('.btn').click(function(){
 			
 			score = score +1;
 			$('#numberCorrect').text(score);
-			$('#feedback').text("Your score: " + score * 10 + "%");
-			$('#finalScore').text(score);
+			$('#feedback').text("That's correct.");
+			//$('#feedback').text("Your score: " + score * 10 + "%");
+			$('#finalScore').text("Youre score: " +  (score * 10) + "%");
 			$('#finalScore').show();
 			$("#response").fadeIn(400);
-			$('#nextQ').remove();
+			$('#nextQ').hide();
 
 			}
 
 		else {
-			$('#feedback').text("Your score: " + score * 10 + "%");
-			$('#finalScore').text(score);
+			//$('#feedback').text("Your score: " + score * 10 + "%");
+			$('#feedback').text("That's incorrect.")
+			$('#finalScore').text("Youre score: " +  (score * 10) + "%");
 			$('#finalScore').show();
 			$('#nextQ').hide();
 			$("#response").fadeIn(400);
+			
 		}
-		$('#feedbackTxt').remove();
 		
-		$('#playAgain').show();
+		
+		//$('#playAgain').show();
 	}
 
 	
@@ -139,7 +143,6 @@ $('.btn').click(function(){
 
 $('#nextQ').click(function() {
 
-	
 	
 	loadNext(metaArray[qCounter]);
 	$('#response').fadeOut(350);
