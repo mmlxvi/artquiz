@@ -49,7 +49,7 @@ function qArray(information, question, choice1, choice2, choice3, choice4, corre
 					"Pablo Picasso", "Pablo Picasso", "text about painting", 'Reading_The_Letter_Picasso_1921_small.jpg');
 
 	var qNine = new qArray("paragraph about Willem de Kooning", "In what year was this painting most likely completed?",
-				 "1915", "1945", "1975", "1995", "1945", "text about de Kooning", 'dekooningpinkangels.jpg');
+				 "1935", "1945", "1955", "1965", "1945", "text about de Kooning", 'dekooningpinkangels.jpg');
 
 	var qTen = new qArray("paragraph about Morris Louis", "Who painted this?", "Morris Louis", "Jackson Pollock", "Mark Rothko", "Jim Dine", "Morris Louis", "text about Louis", 'morrislouissquare.jpg');
 
