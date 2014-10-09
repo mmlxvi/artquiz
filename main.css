@@ -177,7 +177,7 @@ width:300px;
 	
 	
 	margin: 0 auto;
-	margin-top:15px;
+	
 	text-align:center;
 }
 
@@ -190,10 +190,12 @@ width:300px;
 
 #painting0 {
 	display:none;
+	margin-top:15px;
 }
 
 #painting1 {
-	margin-top:100px;
+	display:none;
+	margin-top:115px;
 	
 	
 
@@ -201,14 +203,17 @@ width:300px;
 
 #painting2 {
 	display:none;
+	margin-top:120px;
 }
 
 #painting3 {
 	display:none;
+	margin-top:32px;
+
 }
 
 #painting4 {
-	display:none;
+	
 }
 
 #painting5 {
