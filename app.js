@@ -58,6 +58,7 @@ var metaArray = [qOne, qTwo, qThree, qFour, qFive, qSix, qSeven, qEight, qNine, 
 
 
 function loadNext(qArray){
+	$('#pictureFrame').empty();
     $('#info').text(qArray.information);
     $('#question').text(qArray.question);
     $('#button1').text(qArray.choice1);
