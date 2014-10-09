@@ -55,10 +55,11 @@ function qArray(information, question, choice1, choice2, choice3, choice4, corre
 
 var metaArray = [qOne, qTwo, qThree, qFour, qFive, qSix, qSeven, qEight, qNine, qTen];
 
+var paintingArray = ['#painting0', '#painting1', '#painting2', '#painting3', '#painting4', '#painting5', '#painting6', '#painting7', '#painting8', '#painting9'];
 
 
 function loadNext(qArray){
-	//$('#pictureFrame').empty();
+	$(paintingArray[qCounter - 1]).hide();
     $('#info').text(qArray.information);
     $('#question').text(qArray.question);
     $('#button1').text(qArray.choice1);
@@ -68,6 +69,9 @@ function loadNext(qArray){
     $('#qNumber').text(questionCounter);
     $('#numberCorrect').text(score);
     $('#feedbackTxt').text(qArray.txtForFdbck);
+    $(paintingArray[qCounter]).show();
+    
+
     //$("#pictureFrame").append('<img src="images/' + metaArray[qCounter].painting +'">');
     //$('#picture').show("fast", function () {
     //	$(this).attr('src', qArray.painting);
@@ -152,6 +156,9 @@ $('#playAgain').click(function() {
 	loadNext(metaArray[0]);
 	$('#response').fadeOut(350);
 	$('#qNumber').text(1);
+	('#painting9').hide();
+	
+
 })
 
 });
