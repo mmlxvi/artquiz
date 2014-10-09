@@ -18,9 +18,9 @@ function qArray(information, question, choice1, choice2, choice3, choice4, corre
     this.painting = painting;
 }
 
-	var imageLibrary = ['08132012_EDU_app_raushenberg_main.jpg', 'images/albas breakfast.jpg', 'nightcreatures.jpg',
-						 'Rivera-the-arsenal.jpg', 'white-center.jpg', '124 Good-bye A. 2008.jpg', 'CRI_298734.jpg',
-						 'Reading_The_Letter_Picasso_1921_small.jpg', 'dekooningpinkangels.jpg', 'morris louis square.jpg']
+	var imageLibrary = ['08132012_EDU_app_raushenberg_main.jpg', 'images/albasbreakfast.jpg', 'nightcreatures.jpg',
+						 'Rivera-the-arsenal.jpg', 'white-center.jpg', '124Good-byeA2008.jpg', 'CRI_298734.jpg',
+						 'Reading_The_Letter_Picasso_1921_small.jpg', 'dekooningpinkangels.jpg', 'morrislouissquare.jpg']
 
 
 	var qOne = new qArray("This American artist rose to fame in the 1950s, during the period between Abstract Expressionism and Pop Art. In 1983, he won a Grammy Award for his album design of the Talking Heads album Speaking in Tongues.", 
