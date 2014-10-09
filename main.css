@@ -104,10 +104,43 @@ body {
   display:none;
 }
 
+#feedback {
+	text-align:center;
+	font-size:2.2em;
+	color:white;
+	line-height:2.4em;
+	padding-top:10px;
+
+}
+
 #feedbackTxt {
 	color:white;
 	text-align:center;
-	padding:15px;
+	font-size:1.1em;
+	padding:10px 15px 0px 15px;
+
+
+
+}
+
+#fdbckTop {
+	height:83px;
+
+}
+
+#fdbckMiddle {
+
+	margin-top:0px;
+	position:fixed;
+	height:83px;
+	width:300px;
+
+}
+
+#fdbckBottom {
+	
+	margin-top:80px;
+	height:83px;
 
 }
 
@@ -195,7 +228,7 @@ width:300px;
 
 #painting1 {
 	display:none;
-	margin-top:115px;
+	margin-top:72px;
 	
 	
 
@@ -223,12 +256,13 @@ width:300px;
 }
 #painting6 {
 	display:none;
-	margin-top:40px;
+	margin-top:120px;
 }
 
 #painting7 {
 	display:none;
-	margin-top:4px;
+	margin-top:20px;
+	max-height:460px;
 }
 
 #painting8 {
@@ -295,14 +329,6 @@ width:300px;
 
 }
 
-#feedback {
-	text-align:center;
-	font-size:2.2em;
-	color:white;
-	line-height:2.2em;
-}
-
-
 
 #buttons {
 	width:270px;
@@ -338,7 +364,11 @@ width:300px;
 	height:30px;
 	width:200px;
   margin-bottom:22px;
-
+margin-top:25px;
+	text-align:center;
+	line-height:1.3em;
+	font-size:1em;
+	position:relative;
 }
 
 
@@ -357,10 +387,7 @@ width:300px;
 }
 
 #nextQ {
-	margin-top:15px;
-	text-align:center;
-	line-height:1.3em;
-	font-size:1em;
+	
 }
 
 #finalScore {
