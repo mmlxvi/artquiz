@@ -116,7 +116,7 @@ $('.btn').click(function(){
 			$('#numberCorrect').text(score);
 			$('#feedback').text("That's correct.");
 			//$('#feedback').text("Your score: " + score * 10 + "%");
-			$('#finalScore').text("Youre score: " +  (score * 10) + "%");
+			$('#finalScore').text("Your score: " +  (score * 10) + "%");
 			$('#finalScore').show();
 			$("#response").fadeIn(400);
 			$('#nextQ').hide();
@@ -126,7 +126,7 @@ $('.btn').click(function(){
 		else {
 			//$('#feedback').text("Your score: " + score * 10 + "%");
 			$('#feedback').text("That's incorrect.")
-			$('#finalScore').text("Youre score: " +  (score * 10) + "%");
+			$('#finalScore').text("Your score: " +  (score * 10) + "%");
 			$('#finalScore').show();
 			$('#nextQ').hide();
 			$("#response").fadeIn(400);
