@@ -160,7 +160,7 @@ width:300px;
 */
 
 #middle {
-	width:371px;
+	width:370px;
 	height:500px;
 	margin-left:15px;
 	margin-right:5px;
@@ -174,17 +174,60 @@ width:300px;
 
 #pictureFrame {
 	
-	width:90%;
 	
-	margin: auto;
-	/*margin-top:20px; */
-
+	
+	margin: 0 auto;
+	margin-top:15px;
+	text-align:center;
 }
 
 #pictureFrame img {
 	
-   	width:100%;
-    
+   	width:90%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#painting0 {
+	display:none;
+}
+
+#painting1 {
+	margin-top:100px;
+	
+	
+
+}
+
+#painting2 {
+	display:none;
+}
+
+#painting3 {
+	display:none;
+}
+
+#painting4 {
+	display:none;
+}
+
+#painting5 {
+	display:none;
+}
+#painting6 {
+	display:none;
+}
+
+#painting7 {
+	display:none;
+}
+
+#painting8 {
+	display:none;
+}
+
+#painting9 {
+	display:none;
 }
 
 #right {

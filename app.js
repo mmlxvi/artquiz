@@ -58,7 +58,7 @@ var metaArray = [qOne, qTwo, qThree, qFour, qFive, qSix, qSeven, qEight, qNine, 
 
 
 function loadNext(qArray){
-	$('#pictureFrame').empty();
+	//$('#pictureFrame').empty();
     $('#info').text(qArray.information);
     $('#question').text(qArray.question);
     $('#button1').text(qArray.choice1);
@@ -68,7 +68,7 @@ function loadNext(qArray){
     $('#qNumber').text(questionCounter);
     $('#numberCorrect').text(score);
     $('#feedbackTxt').text(qArray.txtForFdbck);
-    $("#pictureFrame").append('<img src="images/' + metaArray[qCounter].painting +'">');
+    //$("#pictureFrame").append('<img src="images/' + metaArray[qCounter].painting +'">');
     //$('#picture').show("fast", function () {
     //	$(this).attr('src', qArray.painting);
 	//};
