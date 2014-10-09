@@ -213,26 +213,32 @@ width:300px;
 }
 
 #painting4 {
-	
+	display:none;
+	margin-top:8px;
 }
 
 #painting5 {
 	display:none;
+	margin-top:48px;
 }
 #painting6 {
 	display:none;
+	margin-top:40px;
 }
 
 #painting7 {
 	display:none;
+	margin-top:4px;
 }
 
 #painting8 {
 	display:none;
+	margin-top:35px;
 }
 
 #painting9 {
-	display:none;
+	
+	margin-top:75px;
 }
 
 #right {
