@@ -174,18 +174,17 @@ width:300px;
 
 #pictureFrame {
 	
-	width:331px;
+	width:90%;
 	
-	margin: 0 auto;
-	margin-top:20px;
+	margin: auto;
+	/*margin-top:20px; */
 
 }
 
 #pictureFrame img {
 	
    	width:100%;
-    margin-left:auto;
-    margin-right:auto;
+    
 }
 
 #right {
@@ -286,10 +285,6 @@ width:300px;
 	width:200px;
   margin-bottom:22px;
 
-}
-
-#picture2 {
-	display:none;
 }
 
 
