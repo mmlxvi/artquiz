@@ -37,7 +37,7 @@ function qArray(information, question, choice1, choice2, choice3, choice4, corre
 				"José Chávez Morado", "Salvador Corona", "Fernando Leal", "Diego Rivera", "Diego Rivera", "This image is a detail from Diego Rivera's 1928 mural, The Arsenal. The central figure of the painting is Frida Kahlo, Rivera's wife.", 'Rivera-the-arsenal.jpg');
 
 	var qFive = new qArray("Mark Rothko was an Abstract Expressionist painter whose signature works are large-scale paintings of  emotionally evocative colored rectangles. In 1964, he was commissioned to create a meditative space filled with his paintings. Rothko committed suicide in 1970 and did not live to see the chapel completed.", "The Rothko Chapel is located in what American city?",
-				  "Houston", "San Francisco", "Baltimore", "New Haven", "Houston", "Composer Morton Feldman wrote a piece inspired by his visit to the chapel in Houston.", 'white-center.jpg');
+				  "Houston", "San Francisco", "Baltimore", "New Haven", "Houston", "Composer Morton Feldman wrote a piece inspired by his visit to the chapel in Houston, TX.", 'white-center.jpg');
 
 	var qSix = new qArray("This American painter was born in 1952. He studied at CalArts and rose to fame in New York in the 1980s. His paintings often juxtapose seemingly unrelated images appropriated from popular culture and art history. In 1995 he directed the feature film Search and Destroy, which starred Christopher Walken and Dennis Hopper.", "Who painted this?", "Julian Schnabel", "Jeff Koons",
 				"Andy Warhol", "David Salle", "David Salle", "This painting, 'Goodbye A.', was completed by David Salle in 2008.", '124Good-byeA2008.jpg');
