@@ -6,7 +6,7 @@ $(document).ready(function() {
 
 
 
-function qArray(information, question, choice1, choice2, choice3, choice4, correctAns, txtForFdbck, painting){
+	function qArray(information, question, choice1, choice2, choice3, choice4, correctAns, txtForFdbck, painting){
     this.information = information;
     this.question = question;
     this.choice1 = choice1;
@@ -16,18 +16,18 @@ function qArray(information, question, choice1, choice2, choice3, choice4, corre
     this.correctAns = correctAns;
     this.txtForFdbck = txtForFdbck;
     this.painting = painting;
-}
+	}
 
 	var imageLibrary = ['images/08132012_EDU_app_raushenberg_main.jpg', 'images/albasbreakfast.jpg', 'images/nightcreatures.jpg',
 						 'images/Rivera-the-arsenal.jpg', 'images/white-center.jpg', 'images/124Good-byeA2008.jpg', 'images/number-1-lavender-mist.jpg',
-						 'images/Reading_The_Letter_Picasso_1921_small.jpg', 'images/dekooningpinkangels.jpg', 'images/point-of-tranquility-1960.jpg']
+						 'images/Reading_The_Letter_Picasso_1921_small.jpg', 'images/dekooningpinkangels.jpg', 'images/point-of-tranquility-1960.jpg'];
 
 
-	var qOne = new qArray("This American artist rose to fame in the 1950s for his mixed-media pieces that were influenced by Surrealism and anticipated the Pop Art movement. In 1983, he won a Grammy Award for his art design on the Talking Heads album, Speaking in Tongues.", 
+	var qOne = new qArray("This American artist rose to fame in the 1950s for his mixed-media pieces that anticipated the Pop Art movement. In 1983, he won a Grammy Award for his art design on the Talking Heads album, Speaking in Tongues.", 
 							"Who painted this?", "Jasper Johns", "Cy Twombly", "Gerhard Richter",
 							"Robert Rauschenberg", "Robert Rauschenberg", "This silkscreen painting, Retroactive I, was created by Rauschenberg in the summer of 1963, a few months before Kennedy's assassination.", "08132012_EDU_app_raushenberg_main.jpg");
 
-	var qTwo = new qArray("This piece, titled \"Bananas\", was one in a series of collaborative paintings by Andy Warhol and this neo-expressionist painter who first gained notoriety for his graffiti in the Lower East Side of Manhattan.", "Who is the other painter?", 
+	var qTwo = new qArray("This piece, titled Bananas, was one in a series of collaborative paintings by Andy Warhol and this neo-expressionist painter who first gained notoriety for his graffiti in the Lower East Side of Manhattan.", "Who is the other painter?", 
 				"Philip Guston", "David Salle", "Jean-Michel Basquiat", "Francesco Clemente", "Jean-Michel Basquiat", "Basquiat and Warhol completed this painting in 1985. Both painters died within three years of its completion.", "bananas.jpg");
 
 	var qThree = new qArray("She was an influential American abstract expressionist painter in the second half of the 20th century, as was her husband, who was the more famous of the two. The work seen here, Night Creatures, was completed in 1965.", "Who painted this?", "Helen Frankenthaler",
@@ -42,128 +42,97 @@ function qArray(information, question, choice1, choice2, choice3, choice4, corre
 	var qSix = new qArray("This American painter was born in 1952. He studied at CalArts and rose to fame in New York in the 1980s. His paintings often juxtapose seemingly unrelated images appropriated from popular culture and art history. In 1995 he directed the feature film Search and Destroy, which starred Christopher Walken and Dennis Hopper.", "Who painted this?", "Julian Schnabel", "Jeff Koons",
 				"Andy Warhol", "David Salle", "David Salle", "This painting, Goodbye A., was completed by David Salle in 2008.", '124Good-byeA2008.jpg');
 
-	var qSeven = new qArray("Jackson Pollock's early work was influenced by muralists like Diego Rivera as well as aspects of Surrealism. But Pollock is most remembered for his large 'drip-paintings' like the one seen here.", "How did Jackson Pollock die?", "in a car accident",
+	var qSeven = new qArray("Jackson Pollock's early work was influenced by muralists like Diego Rivera as well as aspects of Surrealism. But Pollock is most remembered for his large \"drip-paintings\" like the one seen here.", "How did Jackson Pollock die?", "in a car accident",
 				   "he drowned", "in a plane crash", "heart attack", "in a car accident", "Pollock died at the age of 44 in an alcohol-related single-car accident.", "number-1-lavender-mist.jpg");
 
 	var	qEight = new qArray("This prolific Spanish painter is known for co-founding the Cubist movement. The painting shown here, La Lecture de la Lettre (Reading the Letter), was created circa 1921 during his transition from Cubism to Classicism.", "Who painted this?", "George Braque", "Piet Mondrian", "Willem de Kooning",
-					"Pablo Picasso", "Pablo Picasso", "This painting was found in Picasso's studio after his death.", 'Reading_The_Letter_Picasso_1921_small.jpg');
+					"Pablo Picasso", "Pablo Picasso", "It was Pablo Picasso. This painting was found in Picasso's studio after his death.", 'Reading_The_Letter_Picasso_1921_small.jpg');
 
 	var qNine = new qArray("Willem de Kooning (1904 – 1997) was a Dutch American abstract expressionist. The work shown here, Pink Angels, is the final painting in his first series devoted to images of women.", "In what year was this painting most likely completed?",
-				 "1935", "1945", "1955", "1965", "1945", "'Pink Angels' was completed circa 1945.", 'dekooningpinkangels.jpg');
+				 "1935", "1945", "1955", "1965", "1945", "Pink Angels was completed circa 1945.", 'dekooningpinkangels.jpg');
 
-	var qTen = new qArray("This painter's work, which provided a link between Abstract Expressionism and Color Field painting, is characterized by layered rainbows of acrylic paint poured down huge blank canvases.", "Who painted this?", "Morris Louis", "Jackson Pollock", "Mark Rothko", "Jim Dine", "Morris Louis", "Morris Louis created this painting circa 1959.", 'point-of-tranquility-1960.jpg');
+	var qTen = new qArray("This painter's work, which provided a link between Abstract Expressionism and Color Field painting, is characterized by layered rainbows of acrylic paint poured down huge blank canvases.", "Who painted this?", "Morris Louis", "Jackson Pollock", "Mark Rothko", "Jim Dine", "Morris Louis", "This painting by Morris Louis is titled Point of Tranquility.", 'point-of-tranquility-1960.jpg');
 
-var metaArray = [qOne, qTwo, qThree, qFour, qFive, qSix, qSeven, qEight, qNine, qTen];
+	var metaArray = [qOne, qTwo, qThree, qFour, qFive, qSix, qSeven, qEight, qNine, qTen];
 
-var paintingArray = ['#painting0', '#painting1', '#painting2', '#painting3', '#painting4', '#painting5', '#painting6', '#painting7', '#painting8', '#painting9'];
+	var paintingArray = ['#painting0', '#painting1', '#painting2', '#painting3', '#painting4', '#painting5', '#painting6', '#painting7', '#painting8', '#painting9'];
 
+	
 
-function loadNext(qArray){
-	$(paintingArray[qCounter - 1]).hide();
-    $('#info').text(qArray.information);
-    $('#question').text(qArray.question);
-    $('#button1').text(qArray.choice1);
-    $('#button2').text(qArray.choice2);
-    $('#button3').text(qArray.choice3);
-    $('#button4').text(qArray.choice4);
-    $('#qNumber').text(questionCounter);
-    $('#numberCorrect').text(score);
+	function loadNext(qArray){
+		$(paintingArray[qCounter - 1]).hide();
+    	$('#info').text(qArray.information);
+    	$('#question').text(qArray.question);
+    	$('#button1').text(qArray.choice1);
+    	$('#button2').text(qArray.choice2);
+    	$('#button3').text(qArray.choice3);
+    	$('#button4').text(qArray.choice4);
+    	$('#qNumber').text(questionCounter);
+    	$('#numberCorrect').text(score);
     
-    $(paintingArray[qCounter]).show();
-    
-
-    //$("#pictureFrame").append('<img src="images/' + metaArray[qCounter].painting +'">');
-    //$('#picture').show("fast", function () {
-    //	$(this).attr('src', qArray.painting);
-	//};
-
-}
+    	$(paintingArray[qCounter]).show();
 
 
-loadNext(metaArray[qCounter]);
-$('#qNumber').text(1);
+	}
 
-$('.btn').click(function(){
-	$('#feedbackTxt').text(metaArray[qCounter].txtForFdbck);
-	userChoice = $(this).text();
+
+	loadNext(metaArray[qCounter]);
+
+	$('#qNumber').text(1);
+
+	$('.btn').click(function(){
+		$('#feedbackTxt').text(metaArray[qCounter].txtForFdbck);
+		userChoice = $(this).html();
 		console.log(userChoice);
 
-	if (qCounter < 9) {
+		if (qCounter < 9) {
 
-		if (userChoice === metaArray[qCounter].correctAns) {
+			if (userChoice === metaArray[qCounter].correctAns) {
 			
-			score = score +1;
-			$('#numberCorrect').text(score);
-			$('#feedback').text("That's correct.");
-			$("#response").fadeIn(400);
+				score = score +1;
+				$('#numberCorrect').html(score);
+				$('#feedback').html("That's correct.");
+				$("#response").fadeIn(400);
 
 			}
 
-		else {
-			$('#feedback').text("That's incorrect.")
-			$("#response").fadeIn(400);
-		}
+			else {
+				$('#feedback').text("That's incorrect.");
+				$("#response").fadeIn(400);
+			}
 
-		qCounter = qCounter+1;
+			qCounter = qCounter+1;
 		
-	}
-
-	else {
-
-		if (userChoice === metaArray[qCounter].correctAns) {
-			
-			score = score +1;
-			$('#numberCorrect').text(score);
-			$('#feedback').text("That's correct.");
-			//$('#feedback').text("Your score: " + score * 10 + "%");
-			$('#finalScore').text("Your score: " +  (score * 10) + "%");
-			$('#finalScore').show();
-			$("#response").fadeIn(400);
-			$('#nextQ').hide();
-
 			}
 
 		else {
-			//$('#feedback').text("Your score: " + score * 10 + "%");
-			$('#feedback').text("That's incorrect.")
-			$('#finalScore').text("Your score: " +  (score * 10) + "%");
-			$('#finalScore').show();
-			$('#nextQ').hide();
-			$("#response").fadeIn(400);
+
+			if (userChoice === metaArray[qCounter].correctAns) {
 			
+				score = score +1;
+				$('#numberCorrect').text(score);
+				$('#feedback').text("That's correct.");
+				$('#finalScore').text("Your score: " +  (score * 10) + "%");
+				$('#finalScore').show();
+				$("#response").fadeIn(400);
+				$('#nextQ').hide();
+			}
+
+			else {
+				$('#feedback').text("That's incorrect.");
+				$('#finalScore').text("Your score: " +  (score * 10) + "%");
+				$('#finalScore').show();
+				$('#nextQ').hide();
+				$("#response").fadeIn(400);			
+			}
 		}
-		
-		
-		//$('#playAgain').show();
-	}
+	});
 
-	
+	$('#nextQ').click(function() {
 
-})
-
-$('#nextQ').click(function() {
-
-	
-	loadNext(metaArray[qCounter]);
-	$('#response').fadeOut(350);
-	$('#qNumber').text(qCounter + 1);
-	
-
-
-})
-
-$('#playAgain').click(function() {
-
-	score=0;
-	qCounter=0;
-	loadNext(metaArray[0]);
-	$('#response').fadeOut(350);
-	$('#qNumber').text(1);
-	('#painting9').hide();
-	$('#playAgain').hide();
-	$('#nextQ').show();
-
-
-})
-
+		loadNext(metaArray[qCounter]);
+		$('#response').fadeOut(350);
+		$('#qNumber').text(qCounter + 1);
+	});
 });
+
