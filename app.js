@@ -4,8 +4,7 @@ $(document).ready(function() {
 	var score = 0;
 	var userChoice;
 
-
-
+    
 	function qArray(information, question, choice1, choice2, choice3, choice4, correctAns, txtForFdbck, painting){
     this.information = information;
     this.question = question;
@@ -69,7 +68,6 @@ $(document).ready(function() {
     	$('#button4').text(qArray.choice4);
     	$('#qNumber').text(questionCounter);
     	$('#numberCorrect').text(score);
-    
     	$(paintingArray[qCounter]).show();
 	}
 
