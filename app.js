@@ -71,8 +71,6 @@ $(document).ready(function() {
     	$('#numberCorrect').text(score);
     
     	$(paintingArray[qCounter]).show();
-
-
 	}
 
 
